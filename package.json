@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-site.mjs",
+    "build:all": "node scripts/build-all-sites.mjs",
     "dev": "astro dev",
     "check": "astro check"
   },
