@@ -1,0 +1,60 @@
+---
+import type { SiteConfig } from "@shared/types/site";
+
+type Props = {
+  site: SiteConfig;
+};
+
+const { site } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="kicker">{site.domain}</p>
+    <h1>{site.siteName}</h1>
+    <p class="tagline">{site.tagline}</p>
+    <a class="hero-cta" href={site.ctaHref}>{site.ctaText}</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 5rem 0 3rem;
+  }
+
+  .hero-inner {
+    max-width: 760px;
+  }
+
+  .kicker {
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4.2vw, 3.5rem);
+    line-height: 1.08;
+    color: var(--primary-color);
+  }
+
+  .tagline {
+    margin: 0 0 1.75rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--muted-color);
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 0.8rem 1.15rem;
+    border-radius: 0.6rem;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+</style>

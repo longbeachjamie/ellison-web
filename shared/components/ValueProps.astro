@@ -1,0 +1,44 @@
+---
+type Props = {
+  items?: string[];
+};
+
+const { items = [] } = Astro.props;
+---
+
+{items.length > 0 && (
+  <section class="value-props">
+    <div class="container">
+      <ul>
+        {items.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}
+
+<style>
+  .value-props {
+    padding: 1rem 0 2.5rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.8rem;
+    list-style: none;
+  }
+
+  li {
+    background: var(--surface-color);
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0.6rem;
+    padding: 1rem 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+</style>

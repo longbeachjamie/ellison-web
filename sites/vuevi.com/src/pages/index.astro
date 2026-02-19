@@ -1,0 +1,23 @@
+---
+import CTA from "@shared/components/CTA.astro";
+import Footer from "@shared/components/Footer.astro";
+import Hero from "@shared/components/Hero.astro";
+import ValueProps from "@shared/components/ValueProps.astro";
+import BaseLayout from "@shared/layouts/BaseLayout.astro";
+import site from "../../site.config";
+
+const valueItems = [
+  "Purpose-built messaging for this brand",
+  "Fast static delivery through Cloudflare Pages",
+  "Clear conversion path from first visit"
+];
+---
+
+<BaseLayout site={site}>
+  <main>
+    <Hero site={site} />
+    <ValueProps items={valueItems} />
+    <CTA text={site.ctaText} href={site.ctaHref} />
+  </main>
+  <Footer siteName={site.siteName} domain={site.domain} />
+</BaseLayout>

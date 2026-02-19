@@ -1,0 +1,49 @@
+---
+type Props = {
+  text: string;
+  href: string;
+};
+
+const { text, href } = Astro.props;
+---
+
+<section class="cta-wrap">
+  <div class="container cta-inner">
+    <h2>Ready to Launch?</h2>
+    <p>We are building this site now. Reach out and we will send updates as it rolls out.</p>
+    <a href={href}>{text}</a>
+  </div>
+</section>
+
+<style>
+  .cta-wrap {
+    padding: 0 0 4rem;
+  }
+
+  .cta-inner {
+    padding: 2rem;
+    border-radius: 0.9rem;
+    background: linear-gradient(125deg, color-mix(in srgb, var(--accent-color) 22%, white), #fff);
+    border: 1px solid #cbd5e1;
+  }
+
+  h2 {
+    margin: 0 0 0.6rem;
+    color: var(--primary-color);
+  }
+
+  p {
+    margin: 0 0 1rem;
+    color: var(--muted-color);
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.75rem 1.1rem;
+    border-radius: 0.6rem;
+    color: #fff;
+    background: var(--accent-color);
+    font-weight: 700;
+    text-decoration: none;
+  }
+</style>

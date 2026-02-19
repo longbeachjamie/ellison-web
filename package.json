@@ -1,0 +1,13 @@
+{
+  "name": "ellison-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "dev": "astro dev",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^5.2.0"
+  }
+}

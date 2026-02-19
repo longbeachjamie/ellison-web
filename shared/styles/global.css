@@ -1,0 +1,28 @@
+:root {
+  --primary-color: #0f172a;
+  --accent-color: #0284c7;
+  --text-color: #0b1220;
+  --muted-color: #475569;
+  --surface-color: #ffffff;
+  --surface-soft: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background: radial-gradient(circle at top right, #e0f2fe 0%, #ffffff 38%);
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+}

@@ -1,0 +1,35 @@
+---
+import type { SiteConfig } from "@shared/types/site";
+import "@shared/styles/global.css";
+
+type Props = {
+  site: SiteConfig;
+  pageTitle?: string;
+  pageDescription?: string;
+};
+
+const { site, pageTitle, pageDescription } = Astro.props;
+const title = pageTitle ?? site.metaTitle;
+const description = pageDescription ?? site.metaDescription;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content={site.primaryColor} />
+    <link rel="canonical" href={`https://${site.domain}${Astro.url.pathname}`} />
+    <style define:vars={{ primaryColor: site.primaryColor, accentColor: site.accentColor }}>
+      :root {
+        --primary-color: var(--primaryColor);
+        --accent-color: var(--accentColor);
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

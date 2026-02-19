@@ -1,0 +1,42 @@
+---
+import Footer from "@shared/components/Footer.astro";
+import BaseLayout from "@shared/layouts/BaseLayout.astro";
+import site from "../../site.config";
+---
+
+<BaseLayout site={site} pageTitle={About | }>
+  <main class="container about">
+    <h1>About {site.siteName}</h1>
+    <p>{site.tagline}</p>
+    <p>
+      This site is in active development. We are shaping the full experience for
+      {" "}
+      {site.domain} and will share more soon.
+    </p>
+    <p>
+      <a href={site.ctaHref}>Contact us</a>
+    </p>
+  </main>
+  <Footer siteName={site.siteName} domain={site.domain} />
+</BaseLayout>
+
+<style>
+  .about {
+    padding: 4rem 0;
+  }
+
+  h1 {
+    margin-top: 0;
+    color: var(--primary-color);
+  }
+
+  p {
+    max-width: 68ch;
+    color: var(--muted-color);
+  }
+
+  a {
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+</style>
