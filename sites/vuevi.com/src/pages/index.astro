@@ -15,9 +15,26 @@ const valueItems = [
 
 <BaseLayout site={site}>
   <main>
+    <section class="container logo-wrap" aria-label="Vuevi logo">
+      <img src="/logo-vuevi.svg" alt="VUEVI Management Group, Inc logo" class="brand-logo" />
+    </section>
     <Hero site={site} />
     <ValueProps items={valueItems} />
     <CTA text={site.ctaText} href={site.ctaHref} />
   </main>
   <Footer siteName={site.siteName} domain={site.domain} />
 </BaseLayout>
+
+<style>
+  .logo-wrap {
+    padding-top: 2.2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .brand-logo {
+    width: min(780px, 92vw);
+    height: auto;
+    display: block;
+  }
+</style>

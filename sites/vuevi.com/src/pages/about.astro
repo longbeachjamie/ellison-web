@@ -6,6 +6,7 @@ import site from "../../site.config";
 
 <BaseLayout site={site} pageTitle={"About | " + site.siteName}>
   <main class="container about">
+    <img src="/logo-vuevi.svg" alt="VUEVI Management Group, Inc logo" class="brand-logo" />
     <h1>About {site.siteName}</h1>
     <p>{site.tagline}</p>
     <p>
@@ -25,9 +26,17 @@ import site from "../../site.config";
     padding: 4rem 0;
   }
 
+  .brand-logo {
+    width: min(680px, 92vw);
+    height: auto;
+    display: block;
+    margin: 0 auto 1.6rem;
+  }
+
   h1 {
     margin-top: 0;
     color: var(--primary-color);
+    text-align: center;
   }
 
   p {
