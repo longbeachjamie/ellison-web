@@ -5,7 +5,7 @@ window.VAULT = {
   links: {
     ebay: 'https://www.ebay.com/usr/jkr-vault',
     sportscardspro: 'https://www.sportscardspro.com/offers?seller=3chyczbhpt7qcjbsifpflvtwj4&status=collection',
-    contact: '' // Add a mailto address only after Cloudflare forwarding is verified.
+    contact: 'mailto:hello@jkrvault.com' // Forwarding verified by the owner.
   },
   items: []
 };
