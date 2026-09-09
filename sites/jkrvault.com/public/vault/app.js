@@ -21,7 +21,7 @@
   const money = item => item.sample ? 'Illustrative piece' : item.status === 'Available' && Number.isFinite(item.price) ? new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(item.price) : item.status === 'Available' ? 'Price on eBay' : item.status;
   document.querySelector('#year').textContent = new Date().getFullYear();
   document.querySelector('#preview').hidden = !preview;
-  document.querySelectorAll('[data-link]').forEach(a => { const url = safeUrl(links[a.dataset.link],a.dataset.link); if(url){a.href=url; if(!url.startsWith('mailto:')){a.target='_blank';a.rel='noopener noreferrer';}} });
+  document.querySelectorAll('[data-link]').forEach(a => { const url = safeUrl(links[a.dataset.link],a.dataset.link); if(url){a.href=url; if(a.dataset.link === 'contact' && url.startsWith('mailto:')) a.textContent = 'Email ' + url.slice(7).split('?')[0] + ' ↗'; if(!url.startsWith('mailto:')){a.target='_blank';a.rel='noopener noreferrer';}} });
   if(Object.entries(links).every(([key,value]) => safeUrl(value,key))) document.querySelector('#connections').hidden = true;
   function render() {
     const query = search.value.trim().toLowerCase();
