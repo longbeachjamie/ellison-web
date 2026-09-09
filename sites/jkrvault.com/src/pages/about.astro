@@ -1,42 +1,32 @@
----
-import Footer from "@shared/components/Footer.astro";
-import BaseLayout from "@shared/layouts/BaseLayout.astro";
-import site from "../../site.config";
----
-
-<BaseLayout site={site} pageTitle={"About | " + site.siteName}>
-  <main class="container about">
-    <h1>About {site.siteName}</h1>
-    <p>{site.tagline}</p>
-    <p>
-      This site is in active development. We are shaping the full experience for
-      {" "}
-      {site.domain} and will share more soon.
-    </p>
-    <p>
-      <a href={site.ctaHref}>Contact us</a>
-    </p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Our story | JKR Vault</title>
+  <meta name="description" content="JKR Vault connects collectors with sports cards, memorabilia, and the finds they love. Learn about our collector-first approach.">
+  <link rel="canonical" href="https://jkrvault.com/about/">
+  <meta name="theme-color" content="#171d1b">
+  <link rel="icon" type="image/svg+xml" href="/vault/vault-mark.svg">
+  <link rel="stylesheet" href="/vault/styles.css">
+</head>
+<body>
+  <a class="skip" href="#story">Skip to our story</a>
+  <header class="header wrap">
+    <a class="brand" href="/" aria-label="JKR Vault home"><img src="/vault/vault-mark.svg" width="42" height="42" alt=""><span>JKR <b>VAULT</b><small>FOR THE LOVE OF THE FIND</small></span></a>
+    <nav aria-label="Main navigation"><a href="/#collection">The collection</a><a href="/about/" aria-current="page">Our story</a><a href="/#connect">Buy & trade</a></nav>
+    <a class="button outline small" href="https://www.ebay.com/usr/jkr-vault" target="_blank" rel="noopener noreferrer">Shop on eBay ↗</a>
+  </header>
+  <main id="story" class="wrap about-main">
+    <p class="eyebrow">THE PEOPLE BEHIND THE PIECES</p>
+    <h1>Collecting is personal.<br><em>So is JKR Vault.</em></h1>
+    <p>We buy, sell, and trade sports cards, memorabilia, and collectibles to connect enthusiasts with the items they love. Sports cards are at the heart of JKR Vault, with room for the signatures, stories, and unexpected finds that make a collection your own.</p>
+    <p>Whether you’re chasing a longtime favorite or making your first find, you’re welcome here.</p>
+    <h2>A clear path to your next find.</h2>
+    <p>Our website introduces the collection. Our eBay profile shows the items currently offered for purchase, with actual item photographs, condition details, prices, shipping, and returns on each listing. Purchases from our eBay listings are completed on eBay.</p>
+    <p>Our public SportsCardsPro collection offers a wider view of our collecting interests and may include personal pieces that are not for sale.</p>
+    <div class="actions"><a class="button gold" href="https://www.ebay.com/usr/jkr-vault" target="_blank" rel="noopener noreferrer">Explore JKR Vault on eBay ↗</a></div>
+    <p><a class="text-link" href="https://www.sportscardspro.com/offers?seller=3chyczbhpt7qcjbsifpflvtwj4&amp;status=collection" target="_blank" rel="noopener noreferrer">Explore the SportsCardsPro collection ↗</a></p>
   </main>
-  <Footer siteName={site.siteName} domain={site.domain} />
-</BaseLayout>
-
-<style>
-  .about {
-    padding: 4rem 0;
-  }
-
-  h1 {
-    margin-top: 0;
-    color: var(--primary-color);
-  }
-
-  p {
-    max-width: 68ch;
-    color: var(--muted-color);
-  }
-
-  a {
-    color: var(--accent-color);
-    font-weight: 700;
-  }
-</style>
+  <footer class="wrap"><a class="brand" href="/">JKR <b>VAULT</b></a><p>Unlock your next treasure.</p><small>Independent collectible seller.</small></footer>
+</body>
+</html>
